@@ -1,0 +1,21 @@
+"""
+Determina el tripulante con mayor salario
+- Pide el número de tripulantes
+- Solicita nombre y salario de cada uno
+- Muestra el nombre y salario del que más gana
+"""
+
+num_tripulantes = int(input("Ingrese el número de tripulantes: "))
+
+mayor_salario = 0
+nombre_mayor = ""
+
+for i in range(num_tripulantes):
+    nombre = input(f"Ingrese el nombre del tripulante {i+1}: ")
+    salario = float(input(f"Ingrese el salario de {nombre}: "))
+    
+    if salario > mayor_salario:
+        mayor_salario = salario
+        nombre_mayor = nombre
+
+print(f"El tripulante con mayor salario es {nombre_mayor} con ${mayor_salario:.2f}")
